@@ -11,7 +11,9 @@ const LayoutRenderer = {
     const bg = Library.backgroundById.get(layout.backgroundId);
     if (layout.useBackground && !bg) throw new Error('Unknown background id: ' + layout.backgroundId);
 
-    const files = layout.pieces.map(p => Library.assetById.get(p.assetId).file);
+    // borders: false = the submitter picked tight cut-outs (older layouts have no field = border)
+    const fileOf = a => (layout.borders === false && a.file_tight ? a.file_tight : a.file);
+    const files = layout.pieces.map(p => fileOf(Library.assetById.get(p.assetId)));
     const bgFile = layout.useBackground ? (thumb && bg.thumb ? bg.thumb : bg.file) : null;
     if (bgFile) files.push(bgFile);
     const loaded = await Promise.all(files.map(f => ImageCache.load(f)));
@@ -23,7 +25,7 @@ const LayoutRenderer = {
       x: p.x, y: p.y, width: p.width, height: p.height,
       rotation: (p.rotationDeg || 0) * Math.PI / 180
     }));
-    const images = new Map(layout.pieces.map(p => [p.assetId, byFile.get(Library.assetById.get(p.assetId).file)]));
+    const images = new Map(layout.pieces.map(p => [p.assetId, byFile.get(fileOf(Library.assetById.get(p.assetId)))]));
     return Collage.exportCanvas({
       backgroundImage: bgFile ? byFile.get(bgFile) : null,
       useBackground: !!layout.useBackground,

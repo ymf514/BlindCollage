@@ -131,3 +131,4 @@ Source scans: Sheet 1 (no divider) → out_of_place; Sheet 2 left → mouth · r
 - Sheets 2 and 3 were scanned lying on their side, so every piece from them is rotated 90° clockwise (plus plush-head from sheet 1). Some ids no longer match what the image turned out to be (`dark-umbrella` is a duck, `porcelain-stand` is a telephone, `blue-plug` is a bird). The ids are kept so saved layouts still replay; only the labels changed.
 - The 10 older demo PNGs in `assets/*.png` are no longer referenced.
 - Cut-outs keep a ~9 px band (at scan resolution) of the original scanned paper around each object, with a smoothed scissor-cut outline. Ids, labels, categories and orientation are unchanged.
+- Each asset also has `file_tight` (`assets/riso-tight/<id>.png`): the same cut-out without the paper border, used when the player turns WHITE BORDER off.

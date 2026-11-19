@@ -108,6 +108,7 @@ function validate_(b) {
     backgroundId: str(b.backgroundId, 60),
     useBackground: !!b.useBackground,
     lang: b.lang === 'zh' ? 'zh' : 'en',
+    borders: b.borders !== false,
     canvas: { width: 1200, height: 900 },
     pieces: b.pieces.map(function (p) {
       return {

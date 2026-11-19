@@ -32,6 +32,7 @@
     {
       "id": "mona-lisa",
       "file": "assets/riso/mona-lisa.png",
+      "file_tight": "assets/riso-tight/mona-lisa.png",
       "label": "Mona Lisa with a stray face",
       "prompts": [
         "out_of_place"
@@ -43,6 +44,7 @@
     {
       "id": "wet-floor-sign",
       "file": "assets/riso/wet-floor-sign.png",
+      "file_tight": "assets/riso-tight/wet-floor-sign.png",
       "label": "Wet floor sign",
       "prompts": [
         "out_of_place"
@@ -54,6 +56,7 @@
     {
       "id": "pixel-cake",
       "file": "assets/riso/pixel-cake.png",
+      "file_tight": "assets/riso-tight/pixel-cake.png",
       "label": "Pixel cake",
       "prompts": [
         "out_of_place",
@@ -66,6 +69,7 @@
     {
       "id": "x-ray-ribs",
       "file": "assets/riso/x-ray-ribs.png",
+      "file_tight": "assets/riso-tight/x-ray-ribs.png",
       "label": "X-ray ribcage",
       "prompts": [
         "out_of_place"
@@ -77,6 +81,7 @@
     {
       "id": "miku-standing",
       "file": "assets/riso/miku-standing.png",
+      "file_tight": "assets/riso-tight/miku-standing.png",
       "label": "Twin-tail anime figure",
       "prompts": [
         "out_of_place"
@@ -88,6 +93,7 @@
     {
       "id": "smiley-balloon",
       "file": "assets/riso/smiley-balloon.png",
+      "file_tight": "assets/riso-tight/smiley-balloon.png",
       "label": "Smiley balloon",
       "prompts": [
         "out_of_place"
@@ -99,6 +105,7 @@
     {
       "id": "ufo",
       "file": "assets/riso/ufo.png",
+      "file_tight": "assets/riso-tight/ufo.png",
       "label": "UFO beam",
       "prompts": [
         "out_of_place",
@@ -111,6 +118,7 @@
     {
       "id": "no-face",
       "file": "assets/riso/no-face.png",
+      "file_tight": "assets/riso-tight/no-face.png",
       "label": "Masked spirit",
       "prompts": [
         "out_of_place",
@@ -123,6 +131,7 @@
     {
       "id": "satin-bow",
       "file": "assets/riso/satin-bow.png",
+      "file_tight": "assets/riso-tight/satin-bow.png",
       "label": "Satin bow",
       "prompts": [
         "out_of_place"
@@ -134,6 +143,7 @@
     {
       "id": "plush-head",
       "file": "assets/riso/plush-head.png",
+      "file_tight": "assets/riso-tight/plush-head.png",
       "label": "Plush head",
       "prompts": [
         "out_of_place"
@@ -145,6 +155,7 @@
     {
       "id": "marble-statues",
       "file": "assets/riso/marble-statues.png",
+      "file_tight": "assets/riso-tight/marble-statues.png",
       "label": "Statue group",
       "prompts": [
         "out_of_place",
@@ -157,6 +168,7 @@
     {
       "id": "sneakers",
       "file": "assets/riso/sneakers.png",
+      "file_tight": "assets/riso-tight/sneakers.png",
       "label": "Pair of sneakers",
       "prompts": [
         "out_of_place"
@@ -168,6 +180,7 @@
     {
       "id": "troll-doll",
       "file": "assets/riso/troll-doll.png",
+      "file_tight": "assets/riso-tight/troll-doll.png",
       "label": "Troll doll",
       "prompts": [
         "out_of_place"
@@ -179,6 +192,7 @@
     {
       "id": "melon-soda",
       "file": "assets/riso/melon-soda.png",
+      "file_tight": "assets/riso-tight/melon-soda.png",
       "label": "Melon soda can",
       "prompts": [
         "mouth"
@@ -190,6 +204,7 @@
     {
       "id": "face-toast",
       "file": "assets/riso/face-toast.png",
+      "file_tight": "assets/riso-tight/face-toast.png",
       "label": "Toast with a face",
       "prompts": [
         "mouth"
@@ -201,6 +216,7 @@
     {
       "id": "chip-bag",
       "file": "assets/riso/chip-bag.png",
+      "file_tight": "assets/riso-tight/chip-bag.png",
       "label": "Bag of chips",
       "prompts": [
         "mouth",
@@ -213,6 +229,7 @@
     {
       "id": "pencil-shavings",
       "file": "assets/riso/pencil-shavings.png",
+      "file_tight": "assets/riso-tight/pencil-shavings.png",
       "label": "Pencil shavings",
       "prompts": [
         "mouth"
@@ -224,6 +241,7 @@
     {
       "id": "red-die",
       "file": "assets/riso/red-die.png",
+      "file_tight": "assets/riso-tight/red-die.png",
       "label": "Red die",
       "prompts": [
         "mouth"
@@ -235,6 +253,7 @@
     {
       "id": "banana-toast",
       "file": "assets/riso/banana-toast.png",
+      "file_tight": "assets/riso-tight/banana-toast.png",
       "label": "Banana toast",
       "prompts": [
         "mouth"
@@ -246,6 +265,7 @@
     {
       "id": "instant-noodles",
       "file": "assets/riso/instant-noodles.png",
+      "file_tight": "assets/riso-tight/instant-noodles.png",
       "label": "Instant noodle block",
       "prompts": [
         "mouth"
@@ -257,6 +277,7 @@
     {
       "id": "taco",
       "file": "assets/riso/taco.png",
+      "file_tight": "assets/riso-tight/taco.png",
       "label": "Taco",
       "prompts": [
         "mouth"
@@ -268,6 +289,7 @@
     {
       "id": "cereal-bowl",
       "file": "assets/riso/cereal-bowl.png",
+      "file_tight": "assets/riso-tight/cereal-bowl.png",
       "label": "Bowl of cereal",
       "prompts": [
         "mouth"
@@ -279,6 +301,7 @@
     {
       "id": "wafer-sandwich",
       "file": "assets/riso/wafer-sandwich.png",
+      "file_tight": "assets/riso-tight/wafer-sandwich.png",
       "label": "Wafer sandwich",
       "prompts": [
         "mouth"
@@ -290,6 +313,7 @@
     {
       "id": "gummy-kid",
       "file": "assets/riso/gummy-kid.png",
+      "file_tight": "assets/riso-tight/gummy-kid.png",
       "label": "Gummy candy kid",
       "prompts": [
         "mouth"
@@ -301,6 +325,7 @@
     {
       "id": "raspberry",
       "file": "assets/riso/raspberry.png",
+      "file_tight": "assets/riso-tight/raspberry.png",
       "label": "Raspberry",
       "prompts": [
         "mouth"
@@ -312,6 +337,7 @@
     {
       "id": "whiskey-bottle",
       "file": "assets/riso/whiskey-bottle.png",
+      "file_tight": "assets/riso-tight/whiskey-bottle.png",
       "label": "Whiskey bottle",
       "prompts": [
         "mouth"
@@ -323,6 +349,7 @@
     {
       "id": "lighter",
       "file": "assets/riso/lighter.png",
+      "file_tight": "assets/riso-tight/lighter.png",
       "label": "Smiley lighter",
       "prompts": [
         "mouth"
@@ -334,6 +361,7 @@
     {
       "id": "blood-bag",
       "file": "assets/riso/blood-bag.png",
+      "file_tight": "assets/riso-tight/blood-bag.png",
       "label": "Blood bag",
       "prompts": [
         "mouth",
@@ -346,6 +374,7 @@
     {
       "id": "printer",
       "file": "assets/riso/printer.png",
+      "file_tight": "assets/riso-tight/printer.png",
       "label": "Black office machine",
       "prompts": [
         "falling"
@@ -357,6 +386,7 @@
     {
       "id": "x-eye-blob",
       "file": "assets/riso/x-eye-blob.png",
+      "file_tight": "assets/riso-tight/x-eye-blob.png",
       "label": "Knocked-out blob",
       "prompts": [
         "falling"
@@ -368,6 +398,7 @@
     {
       "id": "traffic-light",
       "file": "assets/riso/traffic-light.png",
+      "file_tight": "assets/riso-tight/traffic-light.png",
       "label": "Traffic light",
       "prompts": [
         "falling"
@@ -379,6 +410,7 @@
     {
       "id": "tree",
       "file": "assets/riso/tree.png",
+      "file_tight": "assets/riso-tight/tree.png",
       "label": "Tree",
       "prompts": [
         "falling"
@@ -390,6 +422,7 @@
     {
       "id": "disposable-camera",
       "file": "assets/riso/disposable-camera.png",
+      "file_tight": "assets/riso-tight/disposable-camera.png",
       "label": "Disposable camera",
       "prompts": [
         "falling"
@@ -401,6 +434,7 @@
     {
       "id": "plastic-jug",
       "file": "assets/riso/plastic-jug.png",
+      "file_tight": "assets/riso-tight/plastic-jug.png",
       "label": "Plastic jug",
       "prompts": [
         "falling"
@@ -412,6 +446,7 @@
     {
       "id": "game-controller",
       "file": "assets/riso/game-controller.png",
+      "file_tight": "assets/riso-tight/game-controller.png",
       "label": "Game controller",
       "prompts": [
         "falling"
@@ -423,6 +458,7 @@
     {
       "id": "crt-tv",
       "file": "assets/riso/crt-tv.png",
+      "file_tight": "assets/riso-tight/crt-tv.png",
       "label": "Small CRT television",
       "prompts": [
         "falling",
@@ -435,6 +471,7 @@
     {
       "id": "motorcycle",
       "file": "assets/riso/motorcycle.png",
+      "file_tight": "assets/riso-tight/motorcycle.png",
       "label": "Motorcycle",
       "prompts": [
         "falling",
@@ -448,6 +485,7 @@
     {
       "id": "sewing-machine",
       "file": "assets/riso/sewing-machine.png",
+      "file_tight": "assets/riso-tight/sewing-machine.png",
       "label": "Sewing machine",
       "prompts": [
         "falling",
@@ -460,6 +498,7 @@
     {
       "id": "phone-booth",
       "file": "assets/riso/phone-booth.png",
+      "file_tight": "assets/riso-tight/phone-booth.png",
       "label": "Phone booth",
       "prompts": [
         "falling"
@@ -471,6 +510,7 @@
     {
       "id": "hand-horn",
       "file": "assets/riso/hand-horn.png",
+      "file_tight": "assets/riso-tight/hand-horn.png",
       "label": "Hand with a horn",
       "prompts": [
         "moving",
@@ -483,6 +523,7 @@
     {
       "id": "pink-goose",
       "file": "assets/riso/pink-goose.png",
+      "file_tight": "assets/riso-tight/pink-goose.png",
       "label": "Pink goose",
       "prompts": [
         "moving",
@@ -495,6 +536,7 @@
     {
       "id": "toy-mouse",
       "file": "assets/riso/toy-mouse.png",
+      "file_tight": "assets/riso-tight/toy-mouse.png",
       "label": "Toy mouse",
       "prompts": [
         "moving"
@@ -506,6 +548,7 @@
     {
       "id": "nyan-cat",
       "file": "assets/riso/nyan-cat.png",
+      "file_tight": "assets/riso-tight/nyan-cat.png",
       "label": "Pixel rainbow cat",
       "prompts": [
         "moving"
@@ -517,6 +560,7 @@
     {
       "id": "pipe-and-ring",
       "file": "assets/riso/pipe-and-ring.png",
+      "file_tight": "assets/riso-tight/pipe-and-ring.png",
       "label": "Pipe and ring",
       "prompts": [
         "moving"
@@ -528,6 +572,7 @@
     {
       "id": "green-candy-monster",
       "file": "assets/riso/green-candy-monster.png",
+      "file_tight": "assets/riso-tight/green-candy-monster.png",
       "label": "Green candy monster",
       "prompts": [
         "moving"
@@ -539,6 +584,7 @@
     {
       "id": "fish-with-legs",
       "file": "assets/riso/fish-with-legs.png",
+      "file_tight": "assets/riso-tight/fish-with-legs.png",
       "label": "Fish with legs",
       "prompts": [
         "moving"
@@ -550,6 +596,7 @@
     {
       "id": "earbud-case",
       "file": "assets/riso/earbud-case.png",
+      "file_tight": "assets/riso-tight/earbud-case.png",
       "label": "Earbud case",
       "prompts": [
         "moving"
@@ -561,6 +608,7 @@
     {
       "id": "green-fish-head",
       "file": "assets/riso/green-fish-head.png",
+      "file_tight": "assets/riso-tight/green-fish-head.png",
       "label": "Green fish head",
       "prompts": [
         "moving"
@@ -572,6 +620,7 @@
     {
       "id": "race-car",
       "file": "assets/riso/race-car.png",
+      "file_tight": "assets/riso-tight/race-car.png",
       "label": "Race car",
       "prompts": [
         "moving",
@@ -584,6 +633,7 @@
     {
       "id": "dark-umbrella",
       "file": "assets/riso/dark-umbrella.png",
+      "file_tight": "assets/riso-tight/dark-umbrella.png",
       "label": "Dark duck",
       "prompts": [
         "moving",
@@ -596,6 +646,7 @@
     {
       "id": "blue-plug",
       "file": "assets/riso/blue-plug.png",
+      "file_tight": "assets/riso-tight/blue-plug.png",
       "label": "Blue bird-thing",
       "prompts": [
         "moving"
@@ -607,6 +658,7 @@
     {
       "id": "strawberry-hamster",
       "file": "assets/riso/strawberry-hamster.png",
+      "file_tight": "assets/riso-tight/strawberry-hamster.png",
       "label": "Strawberry hamster",
       "prompts": [
         "moving"
@@ -618,6 +670,7 @@
     {
       "id": "beetle",
       "file": "assets/riso/beetle.png",
+      "file_tight": "assets/riso-tight/beetle.png",
       "label": "Beetle",
       "prompts": [
         "moving"
@@ -629,6 +682,7 @@
     {
       "id": "floating-lady",
       "file": "assets/riso/floating-lady.png",
+      "file_tight": "assets/riso-tight/floating-lady.png",
       "label": "Floating lady figure",
       "prompts": [
         "moving"
@@ -640,6 +694,7 @@
     {
       "id": "t-rex",
       "file": "assets/riso/t-rex.png",
+      "file_tight": "assets/riso-tight/t-rex.png",
       "label": "T-rex",
       "prompts": [
         "noise",
@@ -652,6 +707,7 @@
     {
       "id": "spiky-skeleton",
       "file": "assets/riso/spiky-skeleton.png",
+      "file_tight": "assets/riso-tight/spiky-skeleton.png",
       "label": "Spiky skeleton",
       "prompts": [
         "noise"
@@ -663,6 +719,7 @@
     {
       "id": "ouch",
       "file": "assets/riso/ouch.png",
+      "file_tight": "assets/riso-tight/ouch.png",
       "label": "OUCH!",
       "prompts": [
         "noise"
@@ -674,6 +731,7 @@
     {
       "id": "miku-singing",
       "file": "assets/riso/miku-singing.png",
+      "file_tight": "assets/riso-tight/miku-singing.png",
       "label": "Singing anime figure",
       "prompts": [
         "noise"
@@ -685,6 +743,7 @@
     {
       "id": "shark-jaws",
       "file": "assets/riso/shark-jaws.png",
+      "file_tight": "assets/riso-tight/shark-jaws.png",
       "label": "Shark jaws",
       "prompts": [
         "noise",
@@ -697,6 +756,7 @@
     {
       "id": "melting-clock",
       "file": "assets/riso/melting-clock.png",
+      "file_tight": "assets/riso-tight/melting-clock.png",
       "label": "Melting clock",
       "prompts": [
         "noise",
@@ -709,6 +769,7 @@
     {
       "id": "swear-bubble",
       "file": "assets/riso/swear-bubble.png",
+      "file_tight": "assets/riso-tight/swear-bubble.png",
       "label": "Swear speech bubble",
       "prompts": [
         "noise"
@@ -720,6 +781,7 @@
     {
       "id": "clapperboard",
       "file": "assets/riso/clapperboard.png",
+      "file_tight": "assets/riso-tight/clapperboard.png",
       "label": "Clapperboard",
       "prompts": [
         "noise"
@@ -731,6 +793,7 @@
     {
       "id": "drama-photo",
       "file": "assets/riso/drama-photo.png",
+      "file_tight": "assets/riso-tight/drama-photo.png",
       "label": "drama! photo",
       "prompts": [
         "noise"
@@ -742,6 +805,7 @@
     {
       "id": "porcelain-stand",
       "file": "assets/riso/porcelain-stand.png",
+      "file_tight": "assets/riso-tight/porcelain-stand.png",
       "label": "Vintage telephone",
       "prompts": [
         "noise"
@@ -753,6 +817,7 @@
     {
       "id": "ahhh",
       "file": "assets/riso/ahhh.png",
+      "file_tight": "assets/riso-tight/ahhh.png",
       "label": "AHHHH!",
       "prompts": [
         "noise"

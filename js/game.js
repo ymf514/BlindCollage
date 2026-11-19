@@ -10,6 +10,7 @@ const state = {
   title: '',
   revealError: null,       // { k, v } message, translated at display time
   submission: { status: 'idle', id: '', message: null },   // idle | sending | sent | error
+  borders: loadBorderPref(),   // true = cut-outs with a white paper border, false = tight cut
   round: 0                 // bumped on start over; stale async results are ignored
 };
 
@@ -19,7 +20,9 @@ const Game = {
   bgImage: null,           // loaded image for state.backgroundId (null while loading)
   bgToken: 0,
   bgError: '',
-  revealed: new Map(),     // assetId -> image for the current round
+  revealed: new Map(),     // assetId -> image for the current round (white-border set)
+  revealedTight: new Map(),// assetId -> image (tight set), loaded only when someone switches to it
+  borderToken: 0,
   progress: null,
   anim: null,              // { progress: Map(pieceId -> 0..1), skip } while the reveal plays
   el: {},
@@ -34,7 +37,8 @@ const Game = {
       toolbar: $('toolbar'), arrange: $('arrange-actions'), bgToggle: $('bg-toggle'), bgRandom: $('bg-random'),
       toScenes: $('to-scenes'), reveal: $('reveal'), hint: $('hint'), status: $('reveal-status'),
       titleBlock: $('title-block'), titleInput: $('title-input'), save: $('save-png'), startOver: $('start-over'),
-      submit: $('submit'), submitNotice: $('submit-notice'), submitStatus: $('submit-status')
+      submit: $('submit'), submitNotice: $('submit-notice'), submitStatus: $('submit-status'),
+      borderToggle: $('border-toggle')
     };
 
     try {
@@ -112,6 +116,7 @@ const Game = {
     e.save.addEventListener('click', () => this.savePNG());
     e.startOver.addEventListener('click', () => this.startOver());
     e.submit.addEventListener('click', () => this.submit());
+    e.borderToggle.addEventListener('click', () => this.setBorders(!state.borders));
     e.titleInput.addEventListener('input', () => { state.title = e.titleInput.value; });
     e.toolbar.addEventListener('click', ev => {
       const act = ev.target.closest('button')?.dataset.act;
@@ -248,7 +253,8 @@ const Game = {
       return this.revealFailed(round, err.message);
     }
 
-    const files = [...new Set([...picks.values()].map(a => a.file))];
+    const fileOf = a => (state.borders || !a.file_tight ? a.file : a.file_tight);
+    const files = [...new Set([...picks.values()].map(fileOf))];
     let done = 0;
     this.progress = { k: 'loadingN', v: { d: 0, n: files.length } };
     this.changed();
@@ -267,10 +273,11 @@ const Game = {
 
     const byFile = new Map(results.map(r => r.value));
     this.revealed = new Map();
+    this.revealedTight = new Map();
     for (const piece of state.pieces) {
       const asset = picks.get(piece.id);
       piece.assetId = asset.id;
-      this.revealed.set(asset.id, byFile.get(asset.file));
+      (state.borders || !asset.file_tight ? this.revealed : this.revealedTight).set(asset.id, byFile.get(fileOf(asset)));
     }
     console.log('[reveal]', state.pieces.map(p => `${p.promptId} → ${p.assetId}`).join(', '));
     await this.playReveal(round);
@@ -319,10 +326,41 @@ const Game = {
     if (this.anim) this.anim.skip = true;
   },
 
+  // White border on/off (title screen). Loads the other image set for this round on first use.
+  async setBorders(on) {
+    if (state.stage !== 'revealed' || on === state.borders) return;
+    const s = state.submission.status;
+    if (s === 'sending' || s === 'sent') return;           // the archived picture is fixed
+    const round = state.round;
+    const token = ++this.borderToken;
+    const target = on ? this.revealed : this.revealedTight;
+    const missing = state.pieces.map(p => Library.assetById.get(p.assetId)).filter(a => a && !target.has(a.id));
+    if (missing.length) {
+      this.el.borderToggle.disabled = true;
+      try {
+        const imgs = await Promise.all(missing.map(a => ImageCache.load(on ? a.file : (a.file_tight || a.file))));
+        missing.forEach((a, i) => target.set(a.id, imgs[i]));
+      } catch (err) {
+        if (round === state.round) this.flash(t('saveFailed', { msg: err.message }));
+        this.el.borderToggle.disabled = false;
+        return;
+      }
+    }
+    if (round !== state.round || token !== this.borderToken) return;
+    state.borders = on;
+    saveBorderPref(on);
+    this.changed();
+  },
+
+  currentImages() {
+    return state.borders ? this.revealed : this.revealedTight;
+  },
+
   revealFailed(round, message) {
     if (round !== state.round) return;
     for (const p of state.pieces) p.assetId = null;
     this.revealed = new Map();
+    this.revealedTight = new Map();
     state.stage = 'arrange';
     state.revealError = { k: 'revealFailed', v: { msg: message } };
     this.progress = null;
@@ -343,7 +381,7 @@ const Game = {
       labels: new Map(Library.prompts.map(p => [p.id, I18n.pick(p, 'label')])),
       revealed: state.stage === 'revealed' || !!this.anim,
       progress: this.anim ? this.anim.progress : null,
-      images: this.revealed,
+      images: this.currentImages(),
       selectedId: state.stage === 'arrange' ? state.selectedPieceId : null,
       ui,
       statusText
@@ -377,6 +415,7 @@ const Game = {
       title: state.title.trim(),
       backgroundId: state.backgroundId,
       useBackground: state.useBackground,
+      borders: state.borders,
       lang: I18n.lang,
       canvas: { width: LOGICAL_W, height: LOGICAL_H },
       pieces: state.pieces.map(p => ({
@@ -431,6 +470,7 @@ const Game = {
     state.title = '';
     state.revealError = null;
     this.revealed = new Map();
+    this.revealedTight = new Map();
     this.progress = null;
     this.el.titleInput.value = '';
     this.showHome(true);
@@ -520,6 +560,8 @@ const Game = {
     e.submit.disabled = sub.status === 'sending' || sub.status === 'sent';
     e.submit.textContent = sub.status === 'sent' ? t('submitted') : sub.status === 'sending' ? t('sending') : t('submit');
     e.titleInput.readOnly = sub.status === 'sending' || sub.status === 'sent';   // archived title stays in sync
+    e.borderToggle.textContent = state.borders ? t('borderOn') : t('borderOff');
+    e.borderToggle.disabled = sub.status === 'sending' || sub.status === 'sent';
     e.submitStatus.textContent = canSubmit ? msg(sub.message) : '';
     e.submitStatus.classList.toggle('error', sub.status === 'error');
   }
@@ -532,4 +574,12 @@ function blobToBase64(blob) {
     r.onerror = () => reject(new Error('Could not read PNG'));
     r.readAsDataURL(blob);
   });
+}
+
+// Remember the border choice per browser (a convenience only; works without storage).
+function loadBorderPref() {
+  try { return localStorage.getItem('bc-borders') !== 'off'; } catch (e) { return true; }
+}
+function saveBorderPref(on) {
+  try { localStorage.setItem('bc-borders', on ? 'on' : 'off'); } catch (e) { /* storage blocked */ }
 }
