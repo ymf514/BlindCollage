@@ -1,0 +1,11 @@
+{
+  "status": "planning-only; not connected to sketch.js",
+  "prompts": [
+    {"id": "mouth", "label": "Something you could maybe put in your mouth"},
+    {"id": "falling", "label": "Something you don't want falling on your head"},
+    {"id": "electricity", "label": "Something that won't do much without electricity"},
+    {"id": "moving", "label": "Something that moves — or looks like it might"},
+    {"id": "noise", "label": "Something that makes noise"},
+    {"id": "out_of_place", "label": "Something that really shouldn't be here"}
+  ]
+}

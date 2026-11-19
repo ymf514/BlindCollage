@@ -1,0 +1,887 @@
+{
+  "version": 2,
+  "maxPieces": 20,
+  "prompts": [
+    {
+      "id": "mouth",
+      "label": "Something you could maybe put in your mouth",
+      "label_zh": "或许可以放进嘴里的东西"
+    },
+    {
+      "id": "falling",
+      "label": "Something you don't want falling on your head",
+      "label_zh": "砸在头上会出大事的东西"
+    },
+    {
+      "id": "moving",
+      "label": "Something that moves — or looks like it might",
+      "label_zh": "会动的，或者看起来会动的东西"
+    },
+    {
+      "id": "noise",
+      "label": "Something that makes noise",
+      "label_zh": "会发出声音的东西"
+    },
+    {
+      "id": "out_of_place",
+      "label": "Something that really shouldn't be here",
+      "label_zh": "不该出现在这里的东西"
+    }
+  ],
+  "assets": [
+    {
+      "id": "mona-lisa",
+      "file": "assets/riso/mona-lisa.png",
+      "label": "Mona Lisa with a stray face",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 210,
+      "height": 279,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "wet-floor-sign",
+      "file": "assets/riso/wet-floor-sign.png",
+      "label": "Wet floor sign",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 238,
+      "height": 345,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "pixel-cake",
+      "file": "assets/riso/pixel-cake.png",
+      "label": "Pixel cake",
+      "prompts": [
+        "out_of_place",
+        "mouth"
+      ],
+      "width": 207,
+      "height": 199,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "x-ray-ribs",
+      "file": "assets/riso/x-ray-ribs.png",
+      "label": "X-ray ribcage",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 131,
+      "height": 145,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "miku-standing",
+      "file": "assets/riso/miku-standing.png",
+      "label": "Twin-tail anime figure",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 223,
+      "height": 213,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "smiley-balloon",
+      "file": "assets/riso/smiley-balloon.png",
+      "label": "Smiley balloon",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 168,
+      "height": 196,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "ufo",
+      "file": "assets/riso/ufo.png",
+      "label": "UFO beam",
+      "prompts": [
+        "out_of_place",
+        "moving"
+      ],
+      "width": 239,
+      "height": 307,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "no-face",
+      "file": "assets/riso/no-face.png",
+      "label": "Masked spirit",
+      "prompts": [
+        "out_of_place",
+        "moving"
+      ],
+      "width": 147,
+      "height": 432,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "satin-bow",
+      "file": "assets/riso/satin-bow.png",
+      "label": "Satin bow",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 176,
+      "height": 248,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "plush-head",
+      "file": "assets/riso/plush-head.png",
+      "label": "Plush head",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 124,
+      "height": 139,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "marble-statues",
+      "file": "assets/riso/marble-statues.png",
+      "label": "Statue group",
+      "prompts": [
+        "out_of_place",
+        "falling"
+      ],
+      "width": 366,
+      "height": 474,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "sneakers",
+      "file": "assets/riso/sneakers.png",
+      "label": "Pair of sneakers",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 208,
+      "height": 165,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "troll-doll",
+      "file": "assets/riso/troll-doll.png",
+      "label": "Troll doll",
+      "prompts": [
+        "out_of_place"
+      ],
+      "width": 161,
+      "height": 400,
+      "source": "riso-sheet-1"
+    },
+    {
+      "id": "melon-soda",
+      "file": "assets/riso/melon-soda.png",
+      "label": "Melon soda can",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 162,
+      "height": 276,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "face-toast",
+      "file": "assets/riso/face-toast.png",
+      "label": "Toast with a face",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 208,
+      "height": 214,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "chip-bag",
+      "file": "assets/riso/chip-bag.png",
+      "label": "Bag of chips",
+      "prompts": [
+        "mouth",
+        "noise"
+      ],
+      "width": 255,
+      "height": 292,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "pencil-shavings",
+      "file": "assets/riso/pencil-shavings.png",
+      "label": "Pencil shavings",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 186,
+      "height": 217,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "red-die",
+      "file": "assets/riso/red-die.png",
+      "label": "Red die",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 264,
+      "height": 292,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "banana-toast",
+      "file": "assets/riso/banana-toast.png",
+      "label": "Banana toast",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 154,
+      "height": 157,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "instant-noodles",
+      "file": "assets/riso/instant-noodles.png",
+      "label": "Instant noodle block",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 239,
+      "height": 233,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "taco",
+      "file": "assets/riso/taco.png",
+      "label": "Taco",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 238,
+      "height": 273,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "cereal-bowl",
+      "file": "assets/riso/cereal-bowl.png",
+      "label": "Bowl of cereal",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 262,
+      "height": 197,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "wafer-sandwich",
+      "file": "assets/riso/wafer-sandwich.png",
+      "label": "Wafer sandwich",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 204,
+      "height": 177,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "gummy-kid",
+      "file": "assets/riso/gummy-kid.png",
+      "label": "Gummy candy kid",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 211,
+      "height": 289,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "raspberry",
+      "file": "assets/riso/raspberry.png",
+      "label": "Raspberry",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 257,
+      "height": 258,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "whiskey-bottle",
+      "file": "assets/riso/whiskey-bottle.png",
+      "label": "Whiskey bottle",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 120,
+      "height": 297,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "lighter",
+      "file": "assets/riso/lighter.png",
+      "label": "Smiley lighter",
+      "prompts": [
+        "mouth"
+      ],
+      "width": 237,
+      "height": 96,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "blood-bag",
+      "file": "assets/riso/blood-bag.png",
+      "label": "Blood bag",
+      "prompts": [
+        "mouth",
+        "out_of_place"
+      ],
+      "width": 183,
+      "height": 260,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "printer",
+      "file": "assets/riso/printer.png",
+      "label": "Black office machine",
+      "prompts": [
+        "falling"
+      ],
+      "width": 221,
+      "height": 165,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "x-eye-blob",
+      "file": "assets/riso/x-eye-blob.png",
+      "label": "Knocked-out blob",
+      "prompts": [
+        "falling"
+      ],
+      "width": 201,
+      "height": 233,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "traffic-light",
+      "file": "assets/riso/traffic-light.png",
+      "label": "Traffic light",
+      "prompts": [
+        "falling"
+      ],
+      "width": 145,
+      "height": 311,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "tree",
+      "file": "assets/riso/tree.png",
+      "label": "Tree",
+      "prompts": [
+        "falling"
+      ],
+      "width": 272,
+      "height": 384,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "disposable-camera",
+      "file": "assets/riso/disposable-camera.png",
+      "label": "Disposable camera",
+      "prompts": [
+        "falling"
+      ],
+      "width": 329,
+      "height": 199,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "plastic-jug",
+      "file": "assets/riso/plastic-jug.png",
+      "label": "Plastic jug",
+      "prompts": [
+        "falling"
+      ],
+      "width": 142,
+      "height": 200,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "game-controller",
+      "file": "assets/riso/game-controller.png",
+      "label": "Game controller",
+      "prompts": [
+        "falling"
+      ],
+      "width": 247,
+      "height": 174,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "crt-tv",
+      "file": "assets/riso/crt-tv.png",
+      "label": "Small CRT television",
+      "prompts": [
+        "falling",
+        "noise"
+      ],
+      "width": 203,
+      "height": 176,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "motorcycle",
+      "file": "assets/riso/motorcycle.png",
+      "label": "Motorcycle",
+      "prompts": [
+        "falling",
+        "moving",
+        "noise"
+      ],
+      "width": 166,
+      "height": 296,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "sewing-machine",
+      "file": "assets/riso/sewing-machine.png",
+      "label": "Sewing machine",
+      "prompts": [
+        "falling",
+        "noise"
+      ],
+      "width": 261,
+      "height": 229,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "phone-booth",
+      "file": "assets/riso/phone-booth.png",
+      "label": "Phone booth",
+      "prompts": [
+        "falling"
+      ],
+      "width": 151,
+      "height": 274,
+      "source": "riso-sheet-2"
+    },
+    {
+      "id": "hand-horn",
+      "file": "assets/riso/hand-horn.png",
+      "label": "Hand with a horn",
+      "prompts": [
+        "moving",
+        "noise"
+      ],
+      "width": 215,
+      "height": 295,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "pink-goose",
+      "file": "assets/riso/pink-goose.png",
+      "label": "Pink goose",
+      "prompts": [
+        "moving",
+        "noise"
+      ],
+      "width": 192,
+      "height": 275,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "toy-mouse",
+      "file": "assets/riso/toy-mouse.png",
+      "label": "Toy mouse",
+      "prompts": [
+        "moving"
+      ],
+      "width": 179,
+      "height": 203,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "nyan-cat",
+      "file": "assets/riso/nyan-cat.png",
+      "label": "Pixel rainbow cat",
+      "prompts": [
+        "moving"
+      ],
+      "width": 287,
+      "height": 134,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "pipe-and-ring",
+      "file": "assets/riso/pipe-and-ring.png",
+      "label": "Pipe and ring",
+      "prompts": [
+        "moving"
+      ],
+      "width": 205,
+      "height": 183,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "green-candy-monster",
+      "file": "assets/riso/green-candy-monster.png",
+      "label": "Green candy monster",
+      "prompts": [
+        "moving"
+      ],
+      "width": 211,
+      "height": 216,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "fish-with-legs",
+      "file": "assets/riso/fish-with-legs.png",
+      "label": "Fish with legs",
+      "prompts": [
+        "moving"
+      ],
+      "width": 287,
+      "height": 255,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "earbud-case",
+      "file": "assets/riso/earbud-case.png",
+      "label": "Earbud case",
+      "prompts": [
+        "moving"
+      ],
+      "width": 300,
+      "height": 232,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "green-fish-head",
+      "file": "assets/riso/green-fish-head.png",
+      "label": "Green fish head",
+      "prompts": [
+        "moving"
+      ],
+      "width": 186,
+      "height": 192,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "race-car",
+      "file": "assets/riso/race-car.png",
+      "label": "Race car",
+      "prompts": [
+        "moving",
+        "noise"
+      ],
+      "width": 508,
+      "height": 167,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "dark-umbrella",
+      "file": "assets/riso/dark-umbrella.png",
+      "label": "Dark duck",
+      "prompts": [
+        "moving",
+        "noise"
+      ],
+      "width": 190,
+      "height": 163,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "blue-plug",
+      "file": "assets/riso/blue-plug.png",
+      "label": "Blue bird-thing",
+      "prompts": [
+        "moving"
+      ],
+      "width": 114,
+      "height": 207,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "strawberry-hamster",
+      "file": "assets/riso/strawberry-hamster.png",
+      "label": "Strawberry hamster",
+      "prompts": [
+        "moving"
+      ],
+      "width": 194,
+      "height": 260,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "beetle",
+      "file": "assets/riso/beetle.png",
+      "label": "Beetle",
+      "prompts": [
+        "moving"
+      ],
+      "width": 174,
+      "height": 224,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "floating-lady",
+      "file": "assets/riso/floating-lady.png",
+      "label": "Floating lady figure",
+      "prompts": [
+        "moving"
+      ],
+      "width": 187,
+      "height": 352,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "t-rex",
+      "file": "assets/riso/t-rex.png",
+      "label": "T-rex",
+      "prompts": [
+        "noise",
+        "moving"
+      ],
+      "width": 418,
+      "height": 312,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "spiky-skeleton",
+      "file": "assets/riso/spiky-skeleton.png",
+      "label": "Spiky skeleton",
+      "prompts": [
+        "noise"
+      ],
+      "width": 294,
+      "height": 304,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "ouch",
+      "file": "assets/riso/ouch.png",
+      "label": "OUCH!",
+      "prompts": [
+        "noise"
+      ],
+      "width": 161,
+      "height": 125,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "miku-singing",
+      "file": "assets/riso/miku-singing.png",
+      "label": "Singing anime figure",
+      "prompts": [
+        "noise"
+      ],
+      "width": 224,
+      "height": 217,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "shark-jaws",
+      "file": "assets/riso/shark-jaws.png",
+      "label": "Shark jaws",
+      "prompts": [
+        "noise",
+        "moving"
+      ],
+      "width": 280,
+      "height": 334,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "melting-clock",
+      "file": "assets/riso/melting-clock.png",
+      "label": "Melting clock",
+      "prompts": [
+        "noise",
+        "out_of_place"
+      ],
+      "width": 189,
+      "height": 214,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "swear-bubble",
+      "file": "assets/riso/swear-bubble.png",
+      "label": "Swear speech bubble",
+      "prompts": [
+        "noise"
+      ],
+      "width": 309,
+      "height": 230,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "clapperboard",
+      "file": "assets/riso/clapperboard.png",
+      "label": "Clapperboard",
+      "prompts": [
+        "noise"
+      ],
+      "width": 191,
+      "height": 200,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "drama-photo",
+      "file": "assets/riso/drama-photo.png",
+      "label": "drama! photo",
+      "prompts": [
+        "noise"
+      ],
+      "width": 267,
+      "height": 212,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "porcelain-stand",
+      "file": "assets/riso/porcelain-stand.png",
+      "label": "Vintage telephone",
+      "prompts": [
+        "noise"
+      ],
+      "width": 219,
+      "height": 186,
+      "source": "riso-sheet-3"
+    },
+    {
+      "id": "ahhh",
+      "file": "assets/riso/ahhh.png",
+      "label": "AHHHH!",
+      "prompts": [
+        "noise"
+      ],
+      "width": 220,
+      "height": 164,
+      "source": "riso-sheet-3"
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "laundromat",
+      "label": "Laundromat",
+      "label_zh": "洗衣房",
+      "file": "background/riso/laundromat.png",
+      "photo": "background/laundromat.jpg",
+      "thumb": "background/riso/thumbs/laundromat.jpg",
+      "credit": "Daderot, CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Laundromat_-_Arlington,_MA.jpg"
+    },
+    {
+      "id": "supermarket",
+      "label": "Supermarket",
+      "label_zh": "超市",
+      "file": "background/riso/supermarket.png",
+      "photo": "background/supermarket.jpg",
+      "thumb": "background/riso/thumbs/supermarket.jpg",
+      "credit": "Tessa Bury, CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Grocery_Store_Aisle,_vermont.jpg"
+    },
+    {
+      "id": "subway",
+      "label": "Subway car",
+      "label_zh": "地铁车厢",
+      "file": "background/riso/subway.png",
+      "photo": "background/subway.jpg",
+      "thumb": "background/riso/thumbs/subway.jpg",
+      "credit": "4300streetcar, CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:NYC_subway_R46_car_interior_August_2025.jpg"
+    },
+    {
+      "id": "museum",
+      "label": "Museum hall",
+      "label_zh": "博物馆大厅",
+      "file": "background/riso/museum.png",
+      "photo": "background/museum.jpg",
+      "thumb": "background/riso/thumbs/museum.jpg",
+      "credit": "Michael D Beckwith, CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Kelvingrove_Art_Gallery_and_Museum_Central_Hall.jpg"
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "label_zh": "海滩",
+      "file": "background/riso/beach.png",
+      "photo": "background/beach.jpg",
+      "thumb": "background/riso/thumbs/beach.jpg",
+      "credit": "Jebulon, CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Parasols,_Evening,_Beach,_Rincon_de_la_Victoria,_Andalusia,_Spain.jpg"
+    },
+    {
+      "id": "livingroom",
+      "label": "Living room",
+      "label_zh": "客厅",
+      "file": "background/riso/livingroom.png",
+      "photo": "background/livingroom.jpg",
+      "thumb": "background/riso/thumbs/livingroom.jpg",
+      "credit": "Kotivalo, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Living_room_with_1960s_objects.jpg"
+    },
+    {
+      "id": "office",
+      "label": "Office",
+      "label_zh": "办公室",
+      "file": "background/riso/office.png",
+      "photo": "background/office.jpg",
+      "thumb": "background/riso/thumbs/office.jpg",
+      "credit": "Larsinio, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Cubicle_land.jpg"
+    },
+    {
+      "id": "classroom",
+      "label": "Classroom",
+      "label_zh": "教室",
+      "file": "background/riso/classroom.png",
+      "photo": "background/classroom.jpg",
+      "thumb": "background/riso/thumbs/classroom.jpg",
+      "credit": "Saral Shots, CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Empty_class_room.jpg"
+    },
+    {
+      "id": "chickens",
+      "label": "Chicken lawn",
+      "label_zh": "草地上的鸡",
+      "file": "background/riso/chickens.jpg",
+      "photo": "background/riso-source/chickens.png",
+      "thumb": "background/riso/thumbs/chickens.jpg",
+      "credit": "the author",
+      "credit_zh": "作者本人"
+    },
+    {
+      "id": "pfizer",
+      "label": "Pfizer Building studio",
+      "label_zh": "辉瑞大楼工作室",
+      "file": "background/riso/pfizer.jpg",
+      "photo": "background/riso-source/pfizer.png",
+      "thumb": "background/riso/thumbs/pfizer.jpg",
+      "credit": "the author",
+      "credit_zh": "作者本人"
+    },
+    {
+      "id": "stairs",
+      "label": "Stairwell",
+      "label_zh": "楼梯间",
+      "file": "background/riso/stairs.png",
+      "photo": "background/riso-source/stairs.png",
+      "thumb": "background/riso/thumbs/stairs.jpg",
+      "credit": "the author",
+      "credit_zh": "作者本人"
+    },
+    {
+      "id": "stuben",
+      "label": "Steuben",
+      "label_zh": "Steuben 楼",
+      "file": "background/riso/stuben.png",
+      "photo": "background/riso-source/stuben.png",
+      "thumb": "background/riso/thumbs/stuben.jpg",
+      "credit": "Google Maps",
+      "credit_zh": "谷歌地图"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blind Collage Replay</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css?v=20261117d">
+  <style>
+    #replay { max-width: 900px; margin: 0 auto; padding: 10px 25px 30px; display: flex; flex-direction: column; gap: 14px; }
+    #replay textarea { width: 100%; min-height: 130px; font: inherit; font-size: 12px; padding: 10px; color: var(--ink); background: transparent; border: 1px solid var(--muted); resize: vertical; }
+    #replay img { width: 100%; display: block; outline: 1px solid #cfcfcf; }
+  </style>
+  <script src="js/assets.js?v=20261117d" defer></script>
+  <script src="js/collage.js?v=20261117d" defer></script>
+  <script src="js/layout.js?v=20261117d" defer></script>
+  <script src="js/replay.js?v=20261117d" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div>BLIND COLLAGE</div>
+      <div class="muted">REBUILD A PICTURE FROM ITS LAYOUT JSON</div>
+    </div>
+    <div>REPLAY</div>
+  </header>
+  <main id="replay">
+    <label for="layout" class="muted">PASTE A <code>layout_json</code> CELL FROM THE SUBMISSIONS SHEET</label>
+    <textarea id="layout" spellcheck="false" placeholder='{"version":1,"title":"…","backgroundId":"subway","pieces":[…]}'></textarea>
+    <div class="row">
+      <button id="render" class="btn" type="button">RENDER</button>
+      <button id="download" class="btn" type="button" disabled>SAVE PNG</button>
+    </div>
+    <p id="status" class="muted" role="status"></p>
+    <img id="out" alt="" hidden>
+  </main>
+  <footer class="bottom"><a class="text" href="./">← BACK TO THE GAME</a><span></span></footer>
+</body>
+</html>

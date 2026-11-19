@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blind Collage</title>
+  <link rel="icon" href="data:,">
+  <!-- Thin serif for Chinese (Latin stays Courier New). Google Fonts only sends the glyphs a page uses. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300&display=swap">
+  <link rel="stylesheet" href="style.css?v=20261117d">
+  <script src="vendor/p5.min.js"></script>
+  <script src="js/config.js?v=20261117d" defer></script>
+  <script src="js/i18n.js?v=20261117d" defer></script>
+  <script src="js/assets.js?v=20261117d" defer></script>
+  <script src="js/collage.js?v=20261117d" defer></script>
+  <script src="js/layout.js?v=20261117d" defer></script>
+  <script src="js/library-view.js?v=20261117d" defer></script>
+  <script src="js/game.js?v=20261117d" defer></script>
+  <script src="js/sketch.js?v=20261117d" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div>BLIND COLLAGE</div>
+      <div id="guide" class="muted"></div>
+    </div>
+    <div class="corner-right">
+      <div class="corner-row">
+        <span class="lang-toggle">
+          <button class="text" type="button" data-lang="en">EN</button><span class="muted">/</span><button class="text" type="button" data-lang="zh">中文</button>
+        </span>
+        <span id="stage-label"></span>
+      </div>
+      <button id="open-library" class="text" type="button" data-i18n="openLibrary" hidden></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 00 / BEGIN: title + scene gallery -->
+    <div id="home">
+      <section id="masthead">
+        <h1 data-i18n="heading">Blind Collage</h1>
+        <p class="muted" data-i18n="tagline"></p>
+      </section>
+
+      <section id="scenes">
+        <div class="section-head">
+          <span class="muted" data-i18n="chooseScene"></span>
+          <button id="back-to-collage" class="text" type="button" data-i18n="backToCollage" hidden></button>
+        </div>
+        <div id="scene-grid"></div>
+        <p id="library-status" class="muted"></p>
+      </section>
+    </div>
+
+    <!-- library of submitted pictures -->
+    <section id="library" hidden>
+      <div class="section-head">
+        <span id="library-count" class="muted"></span>
+        <button id="close-library" class="text" type="button" data-i18n="closeLibrary"></button>
+      </div>
+      <div id="library-grid"></div>
+      <p id="library-msg" class="muted"></p>
+      <div class="row"><button id="library-more" class="text" type="button" data-i18n="more" hidden></button></div>
+    </section>
+
+    <div id="lightbox" hidden>
+      <div id="lightbox-inner">
+        <div id="lightbox-art"></div>
+        <div class="section-head">
+          <span id="lightbox-caption" class="muted"></span>
+          <button id="lightbox-close" class="text" type="button" data-i18n="close"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 01–03: arrange / reveal / title -->
+    <section id="studio" hidden>
+      <aside id="prompt-panel">
+        <div class="section-head"><span class="muted" data-i18n="prompts"></span><span id="count" class="muted">0 / 20</span></div>
+        <div id="prompt-list"></div>
+        <p id="panel-msg" class="muted"></p>
+      </aside>
+
+      <div id="stage-col">
+        <div id="canvas-wrap"></div>
+
+        <div id="toolbar" class="row">
+          <button class="text" data-act="rotl" type="button" data-i18n="rotl" data-i18n-title="rotlTip"></button>
+          <button class="text" data-act="rotr" type="button" data-i18n="rotr" data-i18n-title="rotrTip"></button>
+          <button class="text" data-act="smaller" type="button" data-i18n="smaller" data-i18n-title="smallerTip"></button>
+          <button class="text" data-act="bigger" type="button" data-i18n="bigger" data-i18n-title="biggerTip"></button>
+          <button class="text" data-act="back" type="button" data-i18n="back" data-i18n-title="backTip"></button>
+          <button class="text" data-act="front" type="button" data-i18n="front" data-i18n-title="frontTip"></button>
+          <button class="text" data-act="delete" type="button" data-i18n="remove" data-i18n-title="removeTip"></button>
+        </div>
+
+        <div id="arrange-actions" class="row">
+          <button id="bg-toggle" class="text" type="button"></button>
+          <button id="bg-random" class="text" type="button" data-i18n="randomize"></button>
+          <button id="to-scenes" class="text" type="button" data-i18n="scenes"></button>
+          <button id="reveal" class="btn" type="button" disabled></button>
+        </div>
+
+        <p id="hint" class="muted" data-i18n="hint"></p>
+        <p id="reveal-status" class="muted" role="status"></p>
+
+        <div id="title-block" hidden>
+          <label for="title-input" data-i18n="titleQuestion"></label>
+          <input id="title-input" type="text" maxlength="80" data-i18n-placeholder="untitled" autocomplete="off">
+          <div class="row">
+            <button id="save-png" class="btn" type="button" data-i18n="savePng"></button>
+            <button id="submit" class="btn" type="button" hidden></button>
+            <button id="start-over" class="text" type="button" data-i18n="startOver"></button>
+          </div>
+          <p id="submit-notice" class="muted" data-i18n="submitNotice" hidden></p>
+          <p id="submit-status" class="muted" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <div class="footer-row">
+      <span id="footer-left" class="muted"></span>
+      <span id="footer-right" class="muted"></span>
+    </div>
+    <p id="disclaimer" class="muted" data-i18n="disclaimer"></p>
+  </footer>
+</body>
+</html>
